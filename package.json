@@ -1,0 +1,78 @@
+{
+  "name": "interview-mode",
+  "displayName": "Interview Mode",
+  "description": "Real coding interview simulator with timer, constraints, and anti-cheat",
+  "version": "0.1.0",
+  "publisher": "abi",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "interview",
+    "leetcode",
+    "coding",
+    "practice",
+    "timer",
+    "neetcode"
+  ],
+  "activationEvents": [
+    "onCommand:interview-mode.start"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "interview-mode.start",
+        "title": "Interview Mode: Start"
+      },
+      {
+        "command": "helloworld.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "interview-mode.start",
+          "when": "true"
+        },
+        {
+          "command": "helloworld.helloWorld",
+          "when": "true"
+        }
+      ]
+    }
+  },
+  "icon": "media/iconn.png",  
+"repository": {
+    "type": "github",
+    "url": "https://github.com/Abinaya26-G/interview-mode"
+},
+"bugs": {
+    "url": "https://github.com/Abinaya26-G/interview-mode/issues"
+},
+
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "glob": "^10.3.12",
+    "mocha": "^10.4.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-electron": "^2.3.8"
+  }
+}

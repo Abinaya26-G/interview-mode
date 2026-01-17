@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: var(--vscode-font-family); padding: 20px; background: var(--vscode-sideBar-background); color: var(--vscode-sideBar-foreground); }
+        .timer { font-size: 48px; font-weight: bold; text-align: center; margin: 20px 0; color: #ff6b6b; }
+        .constraint { background: #333; padding: 15px; border-radius: 8px; text-align: center; font-size: 18px; margin: 20px 0; }
+        button { width: 100%; padding: 15px; margin: 10px 0; font-size: 16px; border: none; border-radius: 8px; cursor: pointer; }
+        .start { background: #4CAF50; color: white; }
+        .submit { background: #2196F3; color: white; }
+        .stop { background: #f44336; color: white; }
+    </style>
+</head>
+<body>
+    <h2>🕐 Interview Mode</h2>
+    <div class="timer" id="timer">45:00</div>
+    <div class="constraint" id="constraint">Click Start!</div>
+    <button class="start" onclick="startInterview()">▶️ Start Interview</button>
+    <button class="submit" onclick="submitCode()">📝 Submit Code</button>
+    <button class="stop" onclick="stopInterview()">⏹️ Stop</button>
+    <script>
+        const vscode = acquireVsCodeApi();
+        
+        function startInterview() {
+            vscode.postMessage({command: 'start'});
+        }
+        function submitCode() {
+            vscode.postMessage({command: 'submit'});
+        }
+        function stopInterview() {
+            vscode.postMessage({command: 'stop'});
+        }
+    </script>
+</body>
+</html>
