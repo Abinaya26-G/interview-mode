@@ -3,7 +3,7 @@
   "displayName": "Interview Mode",
   "description": "Real coding interview simulator with timer, constraints, and anti-cheat",
   "version": "0.1.0",
-  "publisher": "abi",
+  "publisher": "AbinayaGowthaman",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -46,7 +46,7 @@
       ]
     }
   },
-  "icon": "media/iconn.png",  
+  
 "repository": {
     "type": "github",
     "url": "https://github.com/Abinaya26-G/interview-mode"
